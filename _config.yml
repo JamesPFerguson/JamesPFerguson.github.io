@@ -1,10 +1,10 @@
 # Site settings
-title: 
+title: James P Ferguson
 header-img: img/home-bg.png
 email: ncjamesferguson@gmail.com
 copyright_name: JamesPFerguson
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Coding with James
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  JamesPFerguson
