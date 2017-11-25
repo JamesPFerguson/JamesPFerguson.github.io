@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "**Efficiency Changes Worlds**"
-date:       2017-11-25 23:57:08 +0000
+title:      "Efficiency Changes Worlds"
+date:       2017-11-25 18:57:08 -0500
 permalink:  efficiency_changes_worlds
 ---
 
