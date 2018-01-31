@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "Stock Tracker"
-date:       2018-01-31 00:03:28 +0000
+date:       2018-01-30 19:03:29 -0500
 permalink:  stock_tracker
 ---
 
 
 Stock Tracker is a CLI application that allows the user to retrieve an up to date list of undervalued companies which have positive price momentum.
 
-To determine if a company is undervalued, a basic value composite is used. This includes Price/sales, Price/FCF,  and Price/earnings, but not price/book. I chose not to use this due to my skepticism about its worth as a value indicator.
+To determine if a company is undervalued, a basic value composite is used. This includes price/sales, price/FCF,  and price/earnings, but not price/book. I chose not to use this due to my skepticism about its worth as a value indicator.
 
 Stocks which qualify as undervalued using the above value composite are then sorted by six month price appreciated, and filtered for positive quarter and month performance.
 
