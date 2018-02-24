@@ -10,7 +10,7 @@ Stock Tracker is a CLI application that allows the user to retrieve an up to dat
 
 To determine if a company is undervalued, a basic value composite is used. This includes price/sales, price/FCF,  and price/earnings, but not price/book. I chose not to use this due to my skepticism about its worth as a value indicator.
 
-Stocks which qualify as undervalued using the above value composite are then sorted by six month price appreciated, and filtered for positive quarter and month performance.
+Stocks which qualify as undervalued using the above value composite are then sorted by six month price appreciation and filtered for positive quarter and month performance.
 
 The top 20 results are returned, and can be explored by inputting a number corresponding to each company. This provides detailed financial information on each company.
 
