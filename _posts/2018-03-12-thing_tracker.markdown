@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Thing Tracker"
-date:       2018-03-12 17:42:28 +0000
+date:       2018-03-12 13:42:28 -0400
 permalink:  thing_tracker
 ---
 
