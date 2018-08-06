@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "Portfolio Tracker - now with AJAX"
-date:       2018-08-06 20:56:43 +0000
+date:       2018-08-06 16:56:43 -0400
 permalink:  portfolio_tracker_-_now_with_ajax
 ---
 
 
-For [this project]https://github.com/JamesPFerguson/portfolio_tracker_v2) I changed some featues to allow user interaction and DOM changes without a page refresh, Stocks can now be added and reviewed without a page refresh. An Index of all stocks entered into Portfolio tracker can now be pulled on the stocks index page with the click of a button.
+For [this project(]https://github.com/JamesPFerguson/portfolio_tracker_v2) I changed some featues to allow user interaction and DOM changes without a page refresh, Stocks can now be added and reviewed without a page refresh. An Index of all stocks entered into Portfolio tracker can now be pulled on the stocks index page with the click of a button.
 
 I was thankful to experience few major issues coding these changes. Most problems I ran into were solveable with 10-20 minutes of using byebug in ruby or debugger in JS. Most issues arose from incorrect syntax or accidentally adding an unecessary ) or }.
 
