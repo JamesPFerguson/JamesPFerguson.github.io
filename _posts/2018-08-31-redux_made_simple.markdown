@@ -6,6 +6,8 @@ permalink:  redux_made_simple
 ---
 
 
+(This post is currently still a draft. It has been published preemptively to test the formatting)
+
 Putting together Redux for the first time is somewhat overwhelming. When I didn't 100% understand what the code I was typing was doing, it frustrated me even more. This post aims to help people in similar situations.
 
 We'll start at the top. With Redux, and Index.js file for your application should look something like this
