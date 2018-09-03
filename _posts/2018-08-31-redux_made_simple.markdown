@@ -10,14 +10,30 @@ Putting together Redux for the first time is somewhat overwhelming. When I didn'
 
 We'll start at the top. With Redux, and Index.js file for your application should look something like this
 
-![](https://imgur.com/nuYrpOehttp://)
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux';
+import store from './store.js';
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+);
+registerServiceWorker();
+
+```
 
 Your App will be wrapped in the Store, which is where Redux keeps all the state in your React application. Provider is an import from the react redux library which takes a store prop. This makes your store available to everything inside App.
 
 
 Here is the code for creating a Redux store.
 
-![](https://imgur.com/Q3Q9PVzhttp://)
 
 ```
 import { combineReducers } from 'redux';
@@ -50,9 +66,6 @@ const store = createStore(
 
 export default store;
 ```
-
-
-![](https://imgur.com/ciJtF2lhttp://)
  
  In this file, I'm importing multiple reducers that I wrote for different state keys. These reducers are seperate because they handle different parts of the state, and the models return to them in the actions are also different. We'll get to the actions soon. For combineReducers, I named my keys the same as the keys that the reducers handled, and then passed the reducers themselves in as the value. Finally, this is exported so that when actions are dispatched to our store, it's aware of every reducer.
 
