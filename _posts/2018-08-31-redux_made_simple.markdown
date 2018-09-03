@@ -19,8 +19,37 @@ Here is the code for creating a Redux store.
 
 ![](https://imgur.com/Q3Q9PVzhttp://)
 
+```
+import { combineReducers } from 'redux';
+import reviewsReducer from './ReviewsReducer';
+import albumReviewsReducer from './AlbumReviewsReducer';
+import artistsReducer from './ArtistAlbumsReducer';
+import homeReducer from './HomeReducer';
+
+const rootReducer = combineReducers({
+    reviews: reviewsReducer, album_reviews: albumReviewsReducer, artist_albums: artistsReducer, clicked: homeReducer
+  })
+
+ export default rootReducer
+```
+
 
 Thunk is necessary for returning functions in your actions, so that you can do things asynchronously (AJAX). The window arguments being passed into createStore are only necessary if you want to use Redux DevTools. The RootReducer returns the product of calling combineReducers in your reducers index file. Let's take a look at mine.
+
+```
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers/index';
+
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ &&
+  window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(thunk)
+);
+
+export default store;
+```
 
 
 ![](https://imgur.com/ciJtF2lhttp://)
