@@ -8,7 +8,7 @@ permalink:  redux_made_simple
 
 Putting together Redux for the first time is somewhat overwhelming. When I didn't 100% understand what the code I was typing was doing, it frustrated me even more. This post aims to help people in similar situations.
 
-We'll start at the top. With Redux, and Index.js file for your application should look something like this
+We'll start at the top. With Redux an Index.js file for your application should look something like this
 
 ```
 import React from 'react';
