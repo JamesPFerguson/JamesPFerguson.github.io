@@ -34,24 +34,6 @@ Your App will be wrapped in the Store, which is where Redux keeps all the state 
 
 Here is the code for creating a Redux store.
 
-
-```
-import { combineReducers } from 'redux';
-import reviewsReducer from './ReviewsReducer';
-import albumReviewsReducer from './AlbumReviewsReducer';
-import artistsReducer from './ArtistAlbumsReducer';
-import homeReducer from './HomeReducer';
-
-const rootReducer = combineReducers({
-    reviews: reviewsReducer, album_reviews: albumReviewsReducer, artist_albums: artistsReducer, clicked: homeReducer
-  })
-
- export default rootReducer
-```
-
-
-Thunk is necessary for returning functions in your actions, so that you can do things asynchronously (AJAX). The window arguments being passed into createStore are only necessary if you want to use Redux DevTools. The RootReducer returns the product of calling combineReducers in your reducers index file. Let's take a look at mine.
-
 ```
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
@@ -65,6 +47,24 @@ const store = createStore(
 );
 
 export default store;
+```
+
+
+Thunk is necessary for returning functions in your actions, so that you can do things asynchronously (AJAX). The window arguments being passed into createStore are only necessary if you want to use Redux DevTools. The RootReducer returns the product of calling combineReducers in your reducers index file. Let's take a look at mine.
+
+
+```
+import { combineReducers } from 'redux';
+import reviewsReducer from './ReviewsReducer';
+import albumReviewsReducer from './AlbumReviewsReducer';
+import artistsReducer from './ArtistAlbumsReducer';
+import homeReducer from './HomeReducer';
+
+const rootReducer = combineReducers({
+    reviews: reviewsReducer, album_reviews: albumReviewsReducer, artist_albums: artistsReducer, clicked: homeReducer
+  })
+
+ export default rootReducer
 ```
  
  In this file, I'm importing multiple reducers that I wrote for different state keys. These reducers are seperate because they handle different parts of the state, and the models return to them in the actions are also different. We'll get to the actions soon. For combineReducers, I named my keys the same as the keys that the reducers handled, and then passed the reducers themselves in as the value. Finally, this is exported so that when actions are dispatched to our store, it's aware of every reducer.
